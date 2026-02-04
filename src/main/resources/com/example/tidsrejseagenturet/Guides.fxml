@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #cfcfcf;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tidsrejseagenturet.ControllerGuides">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onClickAdminPanel" prefHeight="50.0" prefWidth="150.0" text="Admin Panel" />
+            <Button mnemonicParsing="false" onAction="#onClickTidsmaskiner" prefHeight="50.0" prefWidth="150.0" text="Tidsmaskiner" />
+            <Button mnemonicParsing="false" onAction="#onClickTidsalder" prefHeight="50.0" prefWidth="150.0" text="Tidsperioder" />
+            <Button mnemonicParsing="false" onAction="#onClickGuides" prefHeight="50.0" prefWidth="150.0" text="Guides" />
+            <Button layoutX="150.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Hone" />
+            <Button mnemonicParsing="false" onAction="#onClickBooking" prefHeight="150.0" prefWidth="150.0" text="Booking" />
+         </children>
+      </HBox>
+      <Label layoutX="25.0" layoutY="65.0" text="Oversigt over Guides">
+         <font>
+            <Font name="Cambria Math" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="guideTableView" fixedCellSize="0.0" layoutX="24.0" layoutY="100.0" prefHeight="275.0" prefWidth="550.0" scaleShape="false">
+         <columns>
+            <TableColumn fx:id="guideIdTableColumn" prefWidth="50.0" resizable="false" text="ID" />
+            <TableColumn fx:id="guideNameTableColumn" minWidth="25.0" prefWidth="221.0" text="Name" />
+            <TableColumn fx:id="guideSpecialityColumn" prefWidth="276.0" text="Speciality" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #cfcfcf;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tidsrejseagenturet.ControllerBooking">
+   <children>
+      <Label fx:id="bookingTitle" layoutX="79.0" layoutY="68.0" text="Booking" />
+      <HBox alignment="TOP_CENTER" layoutX="66.0" layoutY="183.0" prefHeight="35.0" prefWidth="500.0" spacing="12.0">
+         <children>
+            <MenuButton fx:id="menuTidsmaskine" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" text="Tidsmaskine">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="menuTidsalder" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" text="Tidsalder">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="menuGuide" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" text="Guide">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+         </children>
+      </HBox>
+      <Button layoutX="79.0" layoutY="501.0" mnemonicParsing="false" onAction="#onClickBooking" prefHeight="39.0" prefWidth="473.0" text="Book">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="187.0" layoutX="79.0" layoutY="280.0" stroke="BLACK" strokeType="INSIDE" width="473.0" />
+      <Label layoutX="282.0" layoutY="569.0" text="Click Me daddy">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="292.0" text="Current Booking">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="335.0" text="Tidsmaskine:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="chosenTidsmaskine" layoutX="266.0" layoutY="335.0" text="TidsmaskineValg">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="374.0" text="Tidsalder:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="413.0" text="Guide:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="chosenTidsalder" layoutX="266.0" layoutY="374.0" text="TidsalderValg">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="chosenGuide" layoutX="266.0" layoutY="413.0" text="GuideValg">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="786.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="25.0" prefWidth="100.0" text="back" />
+   </children>
+</AnchorPane>

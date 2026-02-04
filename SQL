@@ -1,0 +1,61 @@
+create table Customer (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100) not null,
+email Varchar(150) not null unique
+);
+
+create table TimeMachines (
+id int primary key auto_increment,
+name varchar(100) not null,
+capacity int not null,
+status varchar(50) not null
+);
+
+create table timePeriods (
+id int primary key auto_increment,
+name varchar(100) not null,
+description varchar(150) not null
+);
+
+create table guides (
+id int primary key auto_increment,
+name varchar(100) not null,
+specialty varchar(150) not null
+ );
+
+
+create table bookings (
+id int primary key auto_increment,
+customer_id int not null,
+time_machine_id int not null,
+time_period_id int not null,
+guide_id int not null,
+
+foreign key (customer_id) references Customer(id),
+foreign key (time_machine_id) references Timemachines(id),
+foreign key (time_period_id) references timeperiods(id),
+foreign key (guide_id) references guides(id)
+);
+
+INSERT INTO TimeMachines (name, capacity, status) VALUES
+('Chrono Cruiser', 4, 'Available'),
+('Temporal Voyager', 6, 'In Use'),
+('Epoch Explorer', 3, 'Maintenance'),
+('Quantum Rider', 2, 'Available'),
+('Infinity Traveler', 5, 'Available');
+
+INSERT INTO timePeriods (name, description) VALUES
+('Viking Age', 'The era of Norse explorers and warriors, roughly 793–1066 AD'),
+('Medieval Period', 'The period between the fall of Rome and the Renaissance, roughly 5th–15th century'),
+('Renaissance', 'A period of cultural rebirth in Europe, 14th–17th century'),
+('Industrial Revolution', 'The transition to new manufacturing processes in the 18th–19th century'),
+('Modern Era', 'The contemporary period marked by technology and globalization');
+
+INSERT INTO Customer (name, email) VALUES
+('Peter Sørensen', 'peter.sorensen@example.com'),
+('Mads Nielsen', 'mads.nielsen@example.com'),
+('Laura Hansen', 'laura.hansen@example.com');
+
+
+
+
